@@ -1,0 +1,70 @@
+@use "../util/fonts" as font;
+@mixin boilerplate($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 48rem) {
+      @content;
+    }
+  }
+}
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: font.$font-family;
+  font-size: font.$font-size;
+  scroll-behavior: smooth;
+}
+
+.home,
+.about,
+.project,
+.contact {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+// home
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  // breakpoint
+  @include boilerplate(mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    min-height: unset;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__intro {
+      font-size: 1.8rem;
+      // breakpoint
+      @include boilerplate(mobile) {
+        font-size: 1.3rem;
+      }
+    }
+    &__work {
+      font-weight: font.$fw-semiBold;
+    }
+  }
+}
+.avatar {
+  display: block;
+  margin: 0 auto;
+}
