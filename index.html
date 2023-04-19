@@ -1,89 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://github.com/fluidicon.png"
-      rel="icon shortcut"
-      type="image/x-icon"
-    />
-    <!-- fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- scss link -->
-    <link rel="stylesheet" href="./dist/style.css" />
-    <title>Portfolio | Alberth G. Ruado</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="nav-container">
-        <div>
-          <h1>AGR</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://github.com/fluidicon.png" rel="icon shortcut" type="image/x-icon" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- scss link -->
+  <link rel="stylesheet" href="./dist/style.css" />
+  <title>Portfolio | Alberth G. Ruado</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <div>
+        <h1>AGR</h1>
+      </div>
+      <nav class="nav-bar">
+        <ul class="nav-bar__list">
+          <li><a href="index.html" class="nav-bar__list-link">Home</a></li>
+          <!-- <li><a href="#about" class="nav-bar__list-link">About</a></li>
+          <li><a href="#project" class="nav-bar__list-link">Project</a></li> -->
+          <li><a href="bookshelves.html" class="nav-bar__list-link">Bookshelves</a></li>
+        </ul>
+      </nav>
+      <button class="toggle-menu">
+        <i class="fa-sharp fa-solid fa-bars"></i>
+        <i class="fa-sharp fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <section class="home" id="home">
+        <article class="home-content">
+          <h2 class="home-content__intro">Hi, I'm Alberth G. Ruado.</h2>
+          <p class="home-content__work">I'm a web develover.</p>
+        </article>
+        <div class="avatar">
+          <img src="./assets/images/2970.gif" alt="Anime cat typing on a keyboard." />
         </div>
-        <nav class="nav-bar">
-          <ul class="nav-bar__list">
-            <li><a href="#home" class="nav-bar__list-link">Home</a></li>
-            <li><a href="#about" class="nav-bar__list-link">About</a></li>
-            <li><a href="#project" class="nav-bar__list-link">Project</a></li>
-            <li><a href="#contact" class="nav-bar__list-link">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="toggle-menu">
-          <i class="fa-sharp fa-solid fa-bars"></i>
-          <i class="fa-sharp fa-solid fa-xmark"></i>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <div class="main-container">
-        <section class="home" id="home">
-          <article class="home-content">
-            <h2 class="home-content__intro">Hi, I'm Alberth G. Ruado.</h2>
-            <p class="home-content__work">I'm a web develover.</p>
-          </article>
-          <div class="avatar">
-            <img
-              src="./assets/images/2970.gif"
-              alt="Anime cat typing on a keyboard."
-            />
-          </div>
-        </section>
-        <section class="about" id="about">
-          <h2>About</h2>
-        </section>
-        <section class="project" id="project">
-          <h2>Project</h2>
-        </section>
-        <section class="contact" id="contact">
-          <h2>Contact</h2>
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <section class="footer-container">
-        <p>Alberth G. Ruado | &copy; <span id="date"></span></p>
       </section>
-    </footer>
+    </div>
+  </main>
 
-    <div class="overlay overlay-hidden"></div>
+  <!-- <footer class="footer">
+    <section class="footer-container">
+      <p>Alberth G. Ruado | &copy; <span id="date"></span></p>
+    </section>
+  </footer> -->
 
-    <!-- script js -->
-    <script defer src="./assets/js/date.js"></script>
-    <!-- toggle js -->
-    <script defer src="./assets/js/ToggleMenu.js"></script>
-  </body>
+  <div class="overlay overlay-hidden"></div>
+
+  <!-- script js -->
+  <script defer src="./assets/js/date.js"></script>
+  <!-- toggle js -->
+  <script defer src="./assets/js/ToggleMenu.js"></script>
+</body>
+
 </html>
