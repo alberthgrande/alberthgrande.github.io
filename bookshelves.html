@@ -13,6 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
+
+    <!-- data tables style -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!-- jquery data tables -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js "></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <!-- scss link -->
     <link rel="stylesheet" href="./dist/style.css" />
     <title>Portfolio | Alberth G. Ruado</title>
@@ -44,113 +50,146 @@
     <main>
         <div class="main-container">
             <section class="bookshelves" id="bookshelves">
-                <table>
-                    <tr>
-                        <th>cover</th>
-                        <th>title</th>
-                        <th>author</th>
-                        <th>avg rating</th>
-                        <th>date read</th>
-                        <th>date added</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://www.goodreads.com/book/show/139855.Knowing_God?from_search=true&from_srp=true&qid=IyUjJtCnn1&rank=1"
-                                target="_blank">
-                                <img class="book-cover" src="./assets/images/bookshelf/knowing-god.jpg"
-                                    alt="Knowing God J.I. Packer">
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-title"
-                                href="https://www.goodreads.com/book/show/139855.Knowing_God?from_search=true&from_srp=true&qid=IyUjJtCnn1&rank=1"
-                                target="_blank">
-                                Knowing God
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-author" href="https://www.goodreads.com/author/show/1145220.J_I_Packer"
-                                target="_blank">
-                                J.I. Packer
-                            </a>
-                        </td>
-                        <td>4.3</td>
-                        <td>Not yet read</td>
-                        <td>Apr 20, 2023</td>
-                    </tr>
-                    <!--  -->
-                    <tr>
-                        <td>
-                            <a href="https://www.goodreads.com/book/show/2139247.The_Language_of_Law_School?from_search=true&from_srp=true&qid=CYj6JF3Qh1&rank=1"
-                                target="_blank">
-                                <img class="book-cover"
-                                    src="./assets/images/bookshelf/Learning to “Think Like a Lawyer”.jpg"
-                                    alt="The Language of Law School: Learning to Think Like a Lawyer">
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-title"
-                                href="https://www.goodreads.com/book/show/2139247.The_Language_of_Law_School?from_search=true&from_srp=true&qid=CYj6JF3Qh1&rank=1"
-                                target="_blank">
-                                The Language of Law School: Learning to Think Like a Lawyer
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-author" href="https://www.goodreads.com/author/show/109015.Elizabeth_Mertz"
-                                target="_blank">
-                                Elizabeth Mertz
-                            </a>
-                        </td>
-                        <td>3.85</td>
-                        <td>Not yet read</td>
-                        <td>Apr 20, 2023</td>
-                    </tr>
-                    <!--  -->
-                    <tr>
-                        <td>
-                            <a href="https://www.goodreads.com/en/book/show/41068599" target="_blank">
-                                <img class="book-cover"
-                                    src="./assets/images/bookshelf/A Fresh Start In Holly Blue Bay.jpg"
-                                    alt="A Fresh Start In Holly Blue Bay">
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-title" href="https://www.goodreads.com/en/book/show/41068599"
-                                target="_blank">
-                                A Fresh Start In Holly Blue Bay
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-author" href="https://www.goodreads.com/author/show/18035487.Cathy_Blossom"
-                                target="_blank">
-                                Cathy Blossom
-                            </a>
-                        </td>
-                        <td>4.12</td>
-                        <td>Apr 19, 2023</td>
-                        <td>Apr 20, 2023</td>
-                    </tr>
-                    <!--  -->
-                    <tr>
-                        <td>
-                            <a href="" target="_blank">
-                                <img class="book-cover" src="" alt="">
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-title" href="" target="_blank">
-
-                            </a>
-                        </td>
-                        <td>
-                            <a class="book-author" href="" target="_blank">
-
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                <table id="example" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                        <tr>
+                            <th>cover</th>
+                            <th>title</th>
+                            <th>author</th>
+                            <th>avg rating</th>
+                            <th>date read</th>
+                            <th>date added</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://www.goodreads.com/book/show/139855.Knowing_God?from_search=true&from_srp=true&qid=IyUjJtCnn1&rank=1"
+                                    target="_blank">
+                                    <img class="book-cover" src="./assets/images/bookshelf/knowing-god.jpg"
+                                        alt="Knowing God J.I. Packer">
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-title"
+                                    href="https://www.goodreads.com/book/show/139855.Knowing_God?from_search=true&from_srp=true&qid=IyUjJtCnn1&rank=1"
+                                    target="_blank">
+                                    Knowing God
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-author" href="https://www.goodreads.com/author/show/1145220.J_I_Packer"
+                                    target="_blank">
+                                    J.I. Packer
+                                </a>
+                            </td>
+                            <td>4.3</td>
+                            <td>Not yet read</td>
+                            <td>Apr 20, 2023</td>
+                        </tr>
+                        <!--  -->
+                        <tr>
+                            <td>
+                                <a href="https://www.goodreads.com/book/show/2139247.The_Language_of_Law_School?from_search=true&from_srp=true&qid=CYj6JF3Qh1&rank=1"
+                                    target="_blank">
+                                    <img class="book-cover"
+                                        src="./assets/images/bookshelf/Learning to “Think Like a Lawyer”.jpg"
+                                        alt="The Language of Law School: Learning to Think Like a Lawyer">
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-title"
+                                    href="https://www.goodreads.com/book/show/2139247.The_Language_of_Law_School?from_search=true&from_srp=true&qid=CYj6JF3Qh1&rank=1"
+                                    target="_blank">
+                                    The Language of Law School: Learning to Think Like a Lawyer
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-author"
+                                    href="https://www.goodreads.com/author/show/109015.Elizabeth_Mertz" target="_blank">
+                                    Elizabeth Mertz
+                                </a>
+                            </td>
+                            <td>3.85</td>
+                            <td>Not yet read</td>
+                            <td>Apr 20, 2023</td>
+                        </tr>
+                        <!--  -->
+                        <tr>
+                            <td>
+                                <a href="https://www.goodreads.com/en/book/show/41068599" target="_blank">
+                                    <img class="book-cover"
+                                        src="./assets/images/bookshelf/A Fresh Start In Holly Blue Bay.jpg"
+                                        alt="A Fresh Start In Holly Blue Bay">
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-title" href="https://www.goodreads.com/en/book/show/41068599"
+                                    target="_blank">
+                                    A Fresh Start In Holly Blue Bay
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-author"
+                                    href="https://www.goodreads.com/author/show/18035487.Cathy_Blossom" target="_blank">
+                                    Cathy Blossom
+                                </a>
+                            </td>
+                            <td>4.12</td>
+                            <td>Apr 19, 2023</td>
+                            <td>Apr 20, 2023</td>
+                        </tr>
+                        <!--  -->
+                        <tr>
+                            <td>
+                                <a href="https://www.goodreads.com/book/show/55867883-a-brief-history-of-living-forever"
+                                    target="_blank">
+                                    <img class="book-cover"
+                                        src="./assets/images/bookshelf/A Brief History of Living Forever.jpg"
+                                        alt="A Brief History of Living Forever">
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-title"
+                                    href="https://www.goodreads.com/book/show/55867883-a-brief-history-of-living-forever"
+                                    target="_blank">
+                                    A Brief History of Living Forever
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-author"
+                                    href="https://www.goodreads.com/author/show/6942198.Jaroslav_Kalfar"
+                                    target="_blank">
+                                    Jaroslav Kalfar
+                                </a>
+                            </td>
+                            <td>3.75</td>
+                            <td>Not yet read</td>
+                            <td>Apr 20, 2023</td>
+                        </tr>
+                        <!--                         
+                        <tr>
+                            <td>
+                                <a href="" target="_blank">
+                                    <img class="book-cover" src="" alt="">
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-title" href="" target="_blank">
+                        
+                                </a>
+                            </td>
+                            <td>
+                                <a class="book-author" href="" target="_blank">
+                        
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> -->
                 </table>
             </section>
         </div>
@@ -168,6 +207,8 @@
     <script defer src="./assets/js/date.js"></script>
     <!-- toggle js -->
     <script defer src="./assets/js/ToggleMenu.js"></script>
+    <!-- datatables -->
+    <script defer src="./assets/js/datatables.js"></script>
 </body>
 
 </html>
