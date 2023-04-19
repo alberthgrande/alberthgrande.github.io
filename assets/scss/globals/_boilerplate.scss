@@ -37,7 +37,7 @@ body {
   align-items: center;
   // breakpoint
   @include boilerplate(desktop) {
-    padding: 7rem;
+    margin-top: 7rem;
   }
 
   @include boilerplate(mobile) {
@@ -68,4 +68,9 @@ body {
 .avatar {
   display: block;
   margin: 0 auto;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: black;
 }
