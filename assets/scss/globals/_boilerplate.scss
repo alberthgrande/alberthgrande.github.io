@@ -63,12 +63,22 @@ body {
     }
     &__work {
       font-weight: font.$fw-semiBold;
+      // breakpoint
+      @include boilerplate(mobile) {
+        text-align: center;
+      }
     }
   }
 }
 .avatar {
   display: block;
   margin: 0 auto;
+
+  img {
+    box-shadow: 0px 0px 16px 0px rgba(128, 128, 128, 0.75);
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(128, 128, 128, 0.75);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(128, 128, 128, 0.75);
+  }
 }
 
 .logo-link {
